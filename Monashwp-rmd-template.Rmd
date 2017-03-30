@@ -1,0 +1,50 @@
+---
+title: "Our great idea"
+author: "Helen of Troy and Genghis Khan"
+fontsize: 11pt
+papersize: a4
+fontfamily: mathpazo
+bibliography: references.bib
+biblio-style: authoryear-comp
+subparagraph: true
+toc: false
+output: 
+  bookdown::pdf_document2:
+    fig_caption: yes
+    fig_height: 5
+    fig_width: 8
+    includes:
+      in_header: preamble.tex
+    keep_tex: yes
+    number_sections: yes
+    citation_package: biblatex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, cache=TRUE, messages=FALSE, warning=FALSE)
+# Make sure you have the latest version of rmarkdown and bookdown
+#devtools::install_github("rstudio/rmarkdown")
+#devtools::install_github("rstudio/bookdown")
+library(ggplot2)
+```
+
+\begin{abstract}
+ A brief summary of our ideas
+\end{abstract}
+
+\begin{keywords}
+  blah, blah
+\end{keywords}
+
+\newpage
+
+#Introduction
+
+In a famous paper, @BC64 introduced a family of transformations \dots
+
+```{r histogram, fig.cap="Nice histogram", message=FALSE, warning=FALSE}
+qplot(exp(rnorm(200)))
+```
+
+Consider the logNormal data plotted in Figure \ref{fig:histogram}.
+
