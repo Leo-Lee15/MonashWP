@@ -1,15 +1,29 @@
 ---
 title: "Our great idea"
-author: "Helen of Troy and Genghis Khan"
-fontsize: 11pt
-papersize: a4
-fontfamily: mathpazo
+author:
+- familyname: Troy
+  othernames: Helen
+  address: University of Greece\newline Athens
+  email: helen.troy@gmail.com
+  correspondingauthor: true
+- familyname: Khan
+  othernames: Genghis
+  address: Mongolian Institute
+blind: false
+cover: true
 bibliography: references.bib
 biblio-style: authoryear-comp
+wpnumber: no/yr
+jelcodes: C10,C14,C22
+abstract: "A brief summary of our ideas"
+keywords: "blah, blah"
+fontsize: 11pt
+fontfamily: mathpazo
 subparagraph: true
 toc: false
-output: 
+output:
   bookdown::pdf_document2:
+    template: monashwp.tex
     fig_caption: yes
     fig_height: 5
     fig_width: 8
@@ -28,15 +42,6 @@ knitr::opts_chunk$set(echo = FALSE, cache=TRUE, messages=FALSE, warning=FALSE)
 library(ggplot2)
 ```
 
-\begin{abstract}
- A brief summary of our ideas
-\end{abstract}
-
-\begin{keywords}
-  blah, blah
-\end{keywords}
-
-\newpage
 
 #Introduction
 
@@ -47,4 +52,3 @@ qplot(exp(rnorm(200)))
 ```
 
 Consider the logNormal data plotted in Figure \ref{fig:histogram}.
-
