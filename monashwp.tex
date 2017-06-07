@@ -242,7 +242,7 @@ $if(blind)$$else$\author{$for(author)$$author.othernames$ $author.familyname$$se
 $if(blind)$$else$\addresses{$for(author)$
 \textbf{$author.othernames$ $author.familyname$}\newline
 $author.address$\newline
-$author.email$\newline
+Email: $author.email$\newline
 $if(author.correspondingauthor)$Corresponding author$endif$\\[1cm]
 $endfor$
 }$endif$
